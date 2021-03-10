@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    createForm();
     fetchUsers()
 })
 
@@ -19,5 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //create - create a new user
 
+    function createForm() {
+        let usersForm = document.getElementById("users-form")
+
+        usersForm.innerHTML +=
+        `
+        <form>
+        Name: <input type="text" id="name"><br>
+        Username: <input type="text" id="username"><br>
+        Email: <input type="text" id="username"><br>
+        <input type="submit" value="Create User">
+        `
+    }
 
     //delete - delete a user
