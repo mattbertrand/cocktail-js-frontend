@@ -28,9 +28,19 @@ document.addEventListener('DOMContentLoaded', () => {
         <form>
         Name: <input type="text" id="name"><br>
         Username: <input type="text" id="username"><br>
-        Email: <input type="text" id="username"><br>
+        Email: <input type="text" id="email"><br>
         <input type="submit" value="Create User">
+        </form>
         `
+        usersForm.addEventListener('submit', userFormSubmission)
     }
 
+    function userFormSubmission() {
+        event.preventDefault()
+        let name = document.getElementById("name").value
+        let username = document.getElementById("username").value
+        let email = document.getElementById("email").value
+
+        console.log(name, username, email)
+    }
     //delete - delete a user
